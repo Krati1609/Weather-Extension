@@ -1,5 +1,5 @@
 // Your API key from WeatherAPI 
-const API_KEY = 'c1989c33e3f2466b80c183756263101';
+const API_KEY = 'YOUR_API_KEY_HERE';
 const API_BASE_URL = 'https://api.weatherapi.com/v1';
 
 // Grab all the HTML elements we need to update
