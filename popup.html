@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Search Section -->
+        <div class="search-box">
+            <input type="text" id="cityInput" placeholder="Enter city name..." />
+            <button id="searchBtn">Search</button>
+            <button id="locationBtn" title="Use my location">📍</button>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Getting weather data...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error hidden">
+            <p id="errorMessage"></p>
+        </div>
+
+        <!-- Weather Display -->
+        <div id="weatherDisplay" class="weather-display hidden">
+            <div id="weatherAnimation" class="weather-animation"></div>
+
+            <div class="weather-info">
+                <h2 id="cityName"></h2>
+                <div class="temperature">
+                    <span id="temp"></span>
+                    <span class="unit">°C</span>
+                </div>
+                <p id="condition" class="condition"></p>
+
+                <div class="details">
+                    <div class="detail-item">
+                        <span class="label">Feels like</span>
+                        <span id="feelsLike"></span>°C
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity"></span>%
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind</span>
+                        <span id="wind"></span> km/h
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forecast Section -->
+        <div id="forecastSection" class="forecast-section hidden">
+            <div class="forecast-title">
+                <span>📅</span> 3-Day Forecast
+            </div>
+            <div class="forecast-grid">
+                <div class="forecast-card" id="forecast0">
+                    <span class="forecast-day"></span>
+                    <span class="forecast-icon"></span>
+                    <span class="forecast-high"></span>
+                    <span class="forecast-low"></span>
+                </div>
+                <div class="forecast-card" id="forecast1">
+                    <span class="forecast-day"></span>
+                    <span class="forecast-icon"></span>
+                    <span class="forecast-high"></span>
+                    <span class="forecast-low"></span>
+                </div>
+                <div class="forecast-card" id="forecast2">
+                    <span class="forecast-day"></span>
+                    <span class="forecast-icon"></span>
+                    <span class="forecast-high"></span>
+                    <span class="forecast-low"></span>
+                </div>
+            </div>
+        </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
